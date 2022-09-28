@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        //cell.textLabel.text = cityNames[indexPath.row]
         
         let cell = Bundle.main.loadNibNamed("TouristCellTableViewCell", owner: self)?.first as! TouristCellTableViewCell
         
