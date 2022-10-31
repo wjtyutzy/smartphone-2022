@@ -17,7 +17,8 @@
 		40F8DB31290C9E66002A659C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DB30290C9E66002A659C /* StringExtension.swift */; };
 		40F8DB33290CA0F7002A659C /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DB32290CA0F7002A659C /* KeychainService.swift */; };
 		40F8DB36290CA551002A659C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DB35290CA551002A659C /* DashboardViewController.swift */; };
-		40F8DB3A290DDB66002A659C /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DB39290DDB66002A659C /* EquipmentModel.swift */; };
+		40F8DB3E29106E0E002A659C /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DB3D29106E0E002A659C /* EquipmentModel.swift */; };
+		40F8DB4029108566002A659C /* PerformMaintainanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8DB3F29108566002A659C /* PerformMaintainanceViewController.swift */; };
 		E1CEC04CEF70F8C3C050BA18 /* Pods_EquipmentManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707E341A3FA649FB32EB141 /* Pods_EquipmentManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +35,8 @@
 		40F8DB30290C9E66002A659C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		40F8DB32290CA0F7002A659C /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		40F8DB35290CA551002A659C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		40F8DB39290DDB66002A659C /* EquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentModel.swift; sourceTree = "<group>"; };
+		40F8DB3D29106E0E002A659C /* EquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentModel.swift; sourceTree = "<group>"; };
+		40F8DB3F29108566002A659C /* PerformMaintainanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformMaintainanceViewController.swift; sourceTree = "<group>"; };
 		9707E341A3FA649FB32EB141 /* Pods_EquipmentManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EquipmentManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B317C1C012B62FD5F747D7C3 /* Pods-EquipmentManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EquipmentManagement.release.xcconfig"; path = "Target Support Files/Pods-EquipmentManagement/Pods-EquipmentManagement.release.xcconfig"; sourceTree = "<group>"; };
 		C9DD7F8E727ED5FC302C37DC /* Pods-EquipmentManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EquipmentManagement.debug.xcconfig"; path = "Target Support Files/Pods-EquipmentManagement/Pods-EquipmentManagement.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,19 +83,16 @@
 		40F8DB18290C924A002A659C /* EquipmentManagement */ = {
 			isa = PBXGroup;
 			children = (
+				40F8DB3C29106D5D002A659C /* View */,
+				40F8DB3B29106D4E002A659C /* Controller */,
 				40F8DB38290DDB12002A659C /* Model */,
-				40F8DB37290DDAB1002A659C /* Views */,
-				40F8DB34290CA4A8002A659C /* Controllers */,
 				40F8DB2F290C9E49002A659C /* Utilities */,
 				40F8DB19290C924A002A659C /* AppDelegate.swift */,
 				40F8DB1B290C924A002A659C /* SceneDelegate.swift */,
-				40F8DB1D290C924A002A659C /* ViewController.swift */,
-				40F8DB1F290C924A002A659C /* Main.storyboard */,
 				40F8DB22290C924D002A659C /* Assets.xcassets */,
 				40F8DB24290C924D002A659C /* LaunchScreen.storyboard */,
 				40F8DB27290C924D002A659C /* Info.plist */,
 				40F8DB2D290C9494002A659C /* GoogleService-Info.plist */,
-				40F8DB35290CA551002A659C /* DashboardViewController.swift */,
 			);
 			path = EquipmentManagement;
 			sourceTree = "<group>";
@@ -107,26 +106,30 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		40F8DB34290CA4A8002A659C /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		40F8DB37290DDAB1002A659C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		40F8DB38290DDB12002A659C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40F8DB39290DDB66002A659C /* EquipmentModel.swift */,
+				40F8DB3D29106E0E002A659C /* EquipmentModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		40F8DB3B29106D4E002A659C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40F8DB1D290C924A002A659C /* ViewController.swift */,
+				40F8DB35290CA551002A659C /* DashboardViewController.swift */,
+				40F8DB3F29108566002A659C /* PerformMaintainanceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		40F8DB3C29106D5D002A659C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40F8DB1F290C924A002A659C /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EE8AD1289429F0E5D96A2F94 /* Pods */ = {
@@ -257,7 +260,8 @@
 				40F8DB31290C9E66002A659C /* StringExtension.swift in Sources */,
 				40F8DB36290CA551002A659C /* DashboardViewController.swift in Sources */,
 				40F8DB1E290C924A002A659C /* ViewController.swift in Sources */,
-				40F8DB3A290DDB66002A659C /* EquipmentModel.swift in Sources */,
+				40F8DB3E29106E0E002A659C /* EquipmentModel.swift in Sources */,
+				40F8DB4029108566002A659C /* PerformMaintainanceViewController.swift in Sources */,
 				40F8DB1A290C924A002A659C /* AppDelegate.swift in Sources */,
 				40F8DB33290CA0F7002A659C /* KeychainService.swift in Sources */,
 				40F8DB1C290C924A002A659C /* SceneDelegate.swift in Sources */,
